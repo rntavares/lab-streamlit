@@ -21,7 +21,7 @@ def load_model():
 
 model = load_model()
 
-st.title("Previsão de Churn de Clientes do banco ABC")
+st.title("Previsão de Churn de Clientes")
 st.caption(f"Publicado por {AUTOR} · POSTECH · Deploy e Monitoramento de ML")
 
 idade = st.slider("Idade do cliente", 18, 90, 35)
