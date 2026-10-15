@@ -44,7 +44,7 @@ def construir_pipeline():
         ("scaler", StandardScaler()),
         ("model", RandomForestClassifier(n_estimators=100, max_depth=6, random_state=SEMENTE)),
         # EXERCÍCIO 4: troque a linha acima por
-        # ("model", LogisticRegression()),
+        #("model", LogisticRegression()),
     ])
 
 
