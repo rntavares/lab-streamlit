@@ -25,7 +25,7 @@ model = load_model()
 st.session_state.execucoes = st.session_state.get("execucoes", 0) + 1
 st.sidebar.metric("Execuções do script", st.session_state.execucoes)
 
-st.title("Previsão de Churn de Clientes")
+st.title("Previsão de Churn de Clientes do Banco ABC")
 st.caption("Aula 01 · Parte 2 — POSTECH · Deploy e Monitoramento de ML")
 
 idade = st.slider("Idade do cliente", 18, 90, 35)
@@ -33,8 +33,8 @@ meses = st.number_input("Meses como cliente", min_value=0, max_value=120, value=
 valor = st.number_input("Valor mensal (R$)", min_value=0.0, value=79.90, step=10.0)
 
 # TODO (exercício 4): troque a linha abaixo por um widget, por exemplo:
-# limiar = st.slider("Limiar de risco", 0.1, 0.9, 0.5)
-limiar = 0.5
+limiar = st.slider("Limiar de risco", 0.1, 0.9, 0.5)
+#limiar = 0.5
 
 if st.button("Prever"):
     entrada = pd.DataFrame([[idade, meses, valor]], columns=["idade", "meses", "valor_mensal"])
